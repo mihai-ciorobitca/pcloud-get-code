@@ -1,8 +1,11 @@
 from flask import Flask, request
 import json
+from flask_cors import CORS
 import requests
 
 app = Flask(__name__)
+
+CORS(app)
 
 @app.post('/get_code')
 def get_code():
