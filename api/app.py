@@ -19,5 +19,5 @@ def get_code():
         "path": file_path
     }
 
-    response = requests.post("https://eapi.pcloud.com/getfilepublink", json=payload)
+    response = requests.post("https://eapi.pcloud.com/listpublinks", json=payload)
     return json.dumps(response.json())
